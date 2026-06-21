@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --bts-purple: #1f0b3a;
     --bts-light-purple: #9C27B0;
     --bts-gold: #c5a059;
@@ -165,7 +165,11 @@ body::before {
     left: 14px;
     bottom: 14px;
     z-index: 40;
-    padding: 8px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 128px;
+    padding: 8px 14px;
     border-radius: 999px;
     color: #eadfff;
     background: rgba(20, 7, 42, 0.66);
@@ -173,6 +177,21 @@ body::before {
     box-shadow: 0 0 16px rgba(156,39,176,0.32);
     backdrop-filter: blur(10px);
     font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.visitor-count-label {
+    display: inline-block;
+    letter-spacing: 0.04em;
+}
+
+.visitor-count img {
+    display: block;
+    height: 22px;
+    width: auto;
+    flex: 0 0 auto;
 }
 
 .container {
@@ -453,7 +472,7 @@ body::before {
 
 .res-song-info {
     position: absolute;
-    top: 67%;                 
+    top: 67.5%;                 
     left: 47%;                  
     width: 70%;
     height: auto;              
@@ -542,8 +561,8 @@ body::before {
 }
 
 .retry-btn {
-    background: linear-gradient(90deg, #6200ea 0%, #d500f9 100%); 
-    box-shadow: 0 0 15px rgba(213, 0, 249, 0.6);
+    background: linear-gradient(90deg, #7b4dff 0%, #c5a059 100%);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.45);
 }
 
 .save-btn {
@@ -552,7 +571,7 @@ body::before {
 }
 
 .retry-btn:hover {
-    box-shadow: 0 0 25px rgba(213, 0, 249, 0.9);
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.75);
     transform: translateY(-2px);
 }
 
@@ -669,7 +688,7 @@ body::before {
     }
 
     .universe-card-bg {
-        width: min(420px, calc(100vw - 24px));
+        width: min(378px, 90vw);
     }
 
     .music-links {
