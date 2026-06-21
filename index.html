@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防彈宇宙籤詩</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <canvas id="night-sky" class="night-sky" aria-hidden="true"></canvas>
+  <div class="volume-control" id="settings-panel" aria-label="背景音樂音量">
+    <button class="settings-toggle" id="settings-toggle" type="button" aria-label="靜音切換">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 11v2h4l5 4V7l-5 4H3z"></path>
+        <path class="sound-wave" d="M16 9.5c.9.7 1.5 1.5 1.5 2.5s-.6 1.8-1.5 2.5"></path>
+        <path class="sound-wave" d="M18.5 7c1.6 1.3 2.5 3 2.5 5s-.9 3.7-2.5 5"></path>
+        <path class="mute-slash" d="M5 5l14 14"></path>
+      </svg>
+    </button>
+    <label class="volume-row" for="music-volume">
+      <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="背景音樂音量">
+    </label>
+  </div>
+  <div class="visitor-count" id="visitor-count">瀏覽人數 0</div>
+  <audio id="bg-music" loop src="https://www.image2url.com/r2/default/audio/1779544308010-e8a5427a-6b86-4e1b-ae39-9ca64304ca6b.mp3"></audio>
+<audio id="shake-sound" src="https://www.image2url.com/r2/default/audio/1779384085084-58c8ac13-6352-4845-94d0-c5db86ec4a96.mp3" preload="auto"></audio>
+
+<div class="container">
+    
+    <div id="page-start" class="page active">
+        <h1 class="main-title">防彈宇宙籤詩</h1>
+        <p class="main-subtitle">FOR ARMY</p>
+        <button class="btn" id="start-btn">開啟防彈宇宙</button>
+        <p class="main-guidance">默想你心中的煩惱或願望，讓防彈的旋律成為治癒你的解答</p>
+    </div>
+
+    <div id="page-draw" class="page">
+        <h1 class="section-title">誠心祈願</h1>
+        <p class="subtitle">凝聚你的心念，點擊籤筒開始搖動</p>
+        
+        <img id="flying-stick" class="flying-stick" src="" alt="籤枝飛出">
+        
+        <div class="bucket-container">
+            <div id="fortune-bucket" class="bucket-wrapper">
+                <img class="bucket-img" src="https://zany-harlequin-wggywxadhw.edgeone.app/9.png" alt="防彈木質籤筒">
+            </div>
+        </div>
+        
+        <p class="hint-text" id="hint-text">▼ 輕觸木質籤筒・抽取宇宙解答 ▼</p>
+    </div>
+
+    <div id="page-result" class="page">
+        <div class="universe-card-container">
+            
+            <div class="universe-card-bg">
+                
+                <div class="res-message-box">
+                    <p id="res-message">這裡放你的宇宙訊息文字...</p>
+                </div>
+
+                <div class="res-cover-box">
+                    <img id="res-cover" src="你的封面網址" alt="歌曲封面">
+                </div>
+
+                <div class="res-song-info">
+                    <h3 id="res-song-name">Yet To Come</h3>
+                   <div class="music-links">
+    <a id="link-spotify" href="#" target="_blank" rel="noopener noreferrer">Spotify</a>
+    <a id="link-apple" href="#" target="_blank" rel="noopener noreferrer">Apple Music</a>
+</div>
+                </div>
+
+                <div class="res-lyrics-box">
+                    <p id="res-lyrics">" 這裡放你的歌詞... "</p>
+                </div>
+
+            </div> 
+            
+            <div class="result-actions">
+                <button class="btn save-btn" id="save-card-btn">儲存宇宙籤詩</button>
+                <button class="btn retry-btn">再次心心相印</button>
+            </div>
+
+        </div> 
+    </div>
+
+</div>
+  <footer class="site-footer">
+    <p>© 2026 防彈宇宙籤詩 INC. ALL RIGHTS RESERVED CJU.</p>
+    <p>本平台非官方關聯，僅作為 A.R.M.Y 在宇宙繁星軌道中聆聽音樂</p>
+  </footer>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

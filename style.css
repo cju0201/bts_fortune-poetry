@@ -1,0 +1,739 @@
+﻿:root {
+    --bts-purple: #1f0b3a;
+    --bts-light-purple: #9C27B0;
+    --bts-gold: #c5a059;
+    --bg-dark: #0a0314;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+}
+
+body {
+    background: #080214;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 48% 36%, rgba(204, 141, 255, 0.32) 0%, rgba(113, 54, 191, 0.18) 16%, transparent 35%),
+        radial-gradient(circle at 18% 18%, rgba(137, 74, 255, 0.28) 0%, transparent 30%),
+        radial-gradient(circle at 82% 70%, rgba(83, 45, 164, 0.32) 0%, transparent 36%),
+        linear-gradient(145deg, #070112 0%, #1a0731 44%, #090116 100%);
+}
+
+.night-sky {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cosmic-whale {
+    display: none;
+    position: fixed;
+    width: clamp(150px, 24vw, 280px);
+    left: -28vw;
+    top: 18vh;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.78;
+    filter: drop-shadow(0 0 24px rgba(190, 130, 255, 0.8));
+    animation: whaleSwim 24s ease-in-out infinite;
+}
+
+.cosmic-whale svg {
+    width: 100%;
+    transform-origin: center;
+    animation: whaleFloat 4.8s ease-in-out infinite;
+}
+
+.whale-glow {
+    fill: rgba(185, 132, 255, 0.18);
+}
+
+.whale-body {
+    fill: url(#whaleGlow);
+}
+
+.whale-belly {
+    fill: rgba(255, 238, 255, 0.54);
+}
+
+.whale-fin,
+.whale-tail {
+    fill: rgba(155, 93, 255, 0.72);
+}
+
+@keyframes whaleSwim {
+    0% { transform: translate(-10vw, 12vh) scale(0.9) rotate(-8deg); }
+    45% { transform: translate(58vw, -2vh) scale(1.04) rotate(5deg); }
+    100% { transform: translate(130vw, 10vh) scale(0.92) rotate(-3deg); }
+}
+
+@keyframes whaleFloat {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-14px) rotate(3deg); }
+}
+
+.volume-control {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px 6px 6px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.22);
+    background: rgba(24, 7, 49, 0.72);
+    box-shadow: 0 0 18px rgba(185, 112, 255, 0.42), inset 0 0 12px rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+}
+
+.settings-toggle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.26);
+    color: #f3dcff;
+    background: radial-gradient(circle at 35% 25%, rgba(255,255,255,0.26), rgba(126, 54, 211, 0.86) 42%, rgba(48, 13, 89, 0.92));
+    box-shadow: 0 0 18px rgba(185, 112, 255, 0.58), inset 0 0 12px rgba(255,255,255,0.12);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-toggle svg {
+    width: 19px;
+    height: 19px;
+    fill: #efe0ff;
+    stroke: #efe0ff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.settings-toggle svg path:not(:first-child) {
+    fill: none;
+}
+
+.settings-toggle .mute-slash {
+    opacity: 0;
+    stroke: #ffd7ff;
+    stroke-width: 2.4;
+}
+
+.settings-toggle.is-muted .sound-wave {
+    opacity: 0;
+}
+
+.settings-toggle.is-muted .mute-slash {
+    opacity: 1;
+}
+
+.volume-row {
+    display: block;
+    color: #d8c3ff;
+    font-size: 0.9rem;
+}
+
+#music-volume {
+    width: 98px;
+    accent-color: var(--bts-light-purple);
+    display: block;
+}
+
+.visitor-count {
+    position: fixed;
+    left: 14px;
+    bottom: 14px;
+    z-index: 40;
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: #eadfff;
+    background: rgba(20, 7, 42, 0.66);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 0 16px rgba(156,39,176,0.32);
+    backdrop-filter: blur(10px);
+    font-size: 0.82rem;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px; 
+    min-height: 100svh;
+    padding: 76px 20px 44px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.page.active {
+    display: flex;
+}
+
+#page-result.active .universe-card-container {
+    animation: cardFlyIn 0.92s cubic-bezier(0.16, 1, 0.3, 1) both;
+    transform-origin: center center;
+}
+
+@keyframes cardFlyIn {
+    0% {
+        opacity: 0;
+        transform: perspective(900px) translateY(46px) scale(0.76) rotateX(18deg) rotateZ(-2deg);
+        filter: blur(8px) brightness(1.45);
+    }
+    58% {
+        opacity: 1;
+        transform: perspective(900px) translateY(-8px) scale(1.025) rotateX(-3deg) rotateZ(0.7deg);
+        filter: blur(0) brightness(1.12);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(900px) translateY(0) scale(1) rotateX(0) rotateZ(0);
+        filter: blur(0) brightness(1);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-title {
+    font-size: 2.2rem;
+    text-shadow: 0 0 15px var(--bts-light-purple), 0 0 5px #fff;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+}
+.main-subtitle {
+    font-size: 1rem;
+    color: var(--bts-gold);
+    letter-spacing: 6px;
+    margin-bottom: 50px;
+}
+.main-guidance {
+    font-size: 1rem;
+    color: var(--bts-gold);
+    letter-spacing: 6px;
+    line-height: 1.8;
+    max-width: min(760px, calc(100vw - 48px));
+    margin-top: 24px;
+}
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 8px; /* 修正原程式碼中拼錯的 margin-bottreom */
+    text-shadow: 0 0 10px var(--bts-light-purple);
+}
+.subtitle {
+    font-size: 0.9rem;
+    color: #bfa7de;
+    margin-bottom: 40px;
+}
+
+/* 全域通用按鈕 */
+.btn {
+    background: linear-gradient(45deg, #4a148c, var(--bts-light-purple));
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.5);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(156, 39, 176, 0.8);
+    border-color: #fff;
+}
+
+/* ==========================================================================
+    🎯 籤筒與動畫區
+   ========================================================================== */
+.bucket-container {
+    position: relative;
+    width: 100%;       
+    max-width: 600px;   
+    height: 500px;      
+    margin-top: -30px;  
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.bucket-wrapper {
+    width: 640px;       
+    cursor: pointer;
+    z-index: 5;         
+    position: relative;
+    margin-top: 20px;   
+}
+
+.bucket-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.shake-animation {
+    animation: shake 0.4s ease infinite;
+}
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    20% { transform: rotate(-10deg) translateX(-5px); }
+    40% { transform: rotate(8deg) translateX(5px); }
+    60% { transform: rotate(-7deg) translateX(-4px); }
+    80% { transform: rotate(6deg) translateX(4px); }
+}
+
+/* 🎋 飛出來的籤枝：強制鎖死尺寸，保證所有圖片（含PNG）大小絕對一致 */
+.flying-stick {
+    position: absolute; 
+    width: 450px;       
+    height: 1200px;     /* 鎖定固定長度，防止多個籤高低長短不一 */
+    object-fit: contain;/* 確保籤枝等比例完整顯示，絕不縮水或變形 */
+    top: 150px;         
+    left: 50%;
+    transform: translate(-50%, 0); 
+    display: none;      
+    z-index: 99;        
+}
+
+.shoot-up {
+    display: block;
+    animation: steelShoot 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
+}
+
+@keyframes steelShoot {
+    0% { transform: translate(-50%, 180px); opacity: 0; }
+    15% { transform: translate(-50%, 120px); opacity: 1; }
+    85% { transform: translate(-50%, -400px); opacity: 1; }
+    100% { transform: translate(-50%, -900px); opacity: 0; }
+}
+
+.hint-text {
+    color: var(--bts-gold);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -80px;  
+    z-index: 6;
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.page.mystic-transition .hint-text {
+    color: #f0dcff;
+    text-shadow: 0 0 18px rgba(205, 157, 255, 0.95);
+    animation: mysticPulse 1.8s ease-in-out infinite;
+}
+
+.page.mystic-transition .bucket-container::after {
+    content: "";
+    position: absolute;
+    inset: 8% 18%;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(221, 185, 255, 0.24), rgba(156, 39, 176, 0.1) 45%, transparent 70%);
+    filter: blur(1px);
+    animation: mysticGlow 2.2s ease-in-out infinite;
+}
+
+@keyframes mysticPulse {
+    0%, 100% { opacity: 0.72; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-2px); }
+}
+
+@keyframes mysticGlow {
+    0%, 100% { opacity: 0.18; transform: scale(0.92); }
+    50% { opacity: 0.82; transform: scale(1.05); }
+}
+
+/* ==========================================================================
+    ✨ 宇宙籤詩卡片主體
+   ========================================================================== */
+.universe-card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.universe-card-bg {
+    position: relative;
+    width: min(420px, calc(100vw - 32px));
+    height: auto;
+    aspect-ratio: 420 / 624;
+    margin: 0 auto;
+    background-image: url('./assets/bts.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(156, 39, 176, 0.3);
+    overflow: hidden;
+}
+
+.res-message-box {
+    position: absolute;
+    top: 41.5%;
+    left: 17%;
+    width: 66%;
+    height: 18%;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+}
+
+/* 宇宙訊息文字：保持靠左對齊 */
+#res-message {
+    color: #2b1640;
+    font-size: clamp(0.78rem, 2.15vw, 0.95rem);
+    font-weight: 600;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    word-break: break-word;
+    text-align: left;         
+    width: 100%;
+    margin: 0;
+}
+
+.res-cover-box {
+    position: absolute;
+    
+    /* ─── 終極定心丸：全像素鎖定，位置與大小全面回歸白線框 ─── */
+    top: 61.5%;
+    left: 1.5%;
+    width: 44%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    
+    }
+
+/* 歌曲封面圖片本體：維持滿版裁剪不變形 */
+#res-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.res-song-info {
+    position: absolute;
+    top: 67%;                 
+    left: 47%;                  
+    width: 70%;
+    height: auto;              
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;    
+}
+
+#res-song-name {
+    font-size: clamp(0.5rem, 3.5vw, 1rem);
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.music-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.music-links a {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: transform 0.2s;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.music-links a:hover {
+    transform: scale(1.05);
+}
+
+#link-spotify { background-color: #1DB954 !important; }
+#link-apple { background-color: #FC3C44 !important; }
+
+.res-lyrics-box {
+    position: absolute;
+    top: 83.5%;                  
+    left: 10%;
+    width: 80%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#res-lyrics {
+    color: #dfcaff;             
+    font-size: clamp(0.62rem, 2.6vw, 0.75rem);          
+    line-height: 1.4;          
+    font-style: italic;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    white-space: normal;       
+}
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 25px; 
+    flex-wrap: wrap;
+}
+
+.retry-btn,
+.save-btn {
+    position: static;           
+    border: none;
+    padding: 12px 32px;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+.retry-btn {
+    background: linear-gradient(90deg, #6200ea 0%, #d500f9 100%); 
+    box-shadow: 0 0 15px rgba(213, 0, 249, 0.6);
+}
+
+.save-btn {
+    background: linear-gradient(90deg, #7b4dff 0%, #c5a059 100%);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.45);
+}
+
+.retry-btn:hover {
+    box-shadow: 0 0 25px rgba(213, 0, 249, 0.9);
+    transform: translateY(-2px);
+}
+
+.save-btn:hover {
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.75);
+    transform: translateY(-2px);
+}
+
+.site-footer {
+    position: relative;
+    z-index: 2;
+    width: min(920px, calc(100vw - 32px));
+    margin: 18px auto 24px;
+    padding: 0 12px;
+    color: rgba(234, 223, 255, 0.72);
+    text-align: center;
+    font-size: 0.72rem;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(156, 39, 176, 0.42);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        min-height: 100svh;
+        overflow-y: auto;
+    }
+
+    .container {
+        min-height: 100svh;
+        padding: 70px 10px 28px;
+        max-width: none;
+    }
+
+    .volume-control {
+        top: 12px;
+        right: 12px;
+        gap: 6px;
+        padding: 5px 8px 5px 5px;
+    }
+
+    .settings-toggle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .settings-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    #music-volume {
+        width: 78px;
+    }
+
+    .visitor-count {
+        left: 10px;
+        bottom: 10px;
+        font-size: 0.76rem;
+    }
+
+    .cosmic-whale {
+        width: 170px;
+        top: 22vh;
+    }
+
+    .main-title {
+        font-size: 1.7rem;
+    }
+
+    .main-subtitle {
+        margin-bottom: 34px;
+    }
+
+    .main-guidance {
+        margin-top: 18px;
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .subtitle {
+        margin-bottom: 20px;
+    }
+
+    .bucket-container {
+        height: 390px;
+        margin-top: -12px;
+    }
+
+    .bucket-wrapper {
+        width: min(560px, 118vw);
+        margin-top: 8px;
+    }
+
+    .flying-stick {
+        width: 330px;
+        height: 900px;
+        top: 120px;
+    }
+
+    .hint-text {
+        margin-top: -48px;
+        font-size: 0.9rem;
+        padding: 0 12px;
+    }
+
+    .universe-card-bg {
+        width: min(420px, calc(100vw - 24px));
+    }
+
+    .music-links {
+        gap: 5px;
+    }
+
+    .music-links a {
+        padding: 8px 9px;
+        font-size: 0.72rem;
+    }
+
+    .result-actions {
+        width: min(420px, 96vw);
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .retry-btn,
+    .save-btn {
+        width: 100%;
+        padding: 11px 18px;
+        font-size: 0.95rem;
+    }
+
+    .site-footer {
+        width: auto;
+        margin: 12px auto 18px;
+        padding: 0 16px;
+        font-size: 0.68rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding-top: 64px;
+    }
+
+    .volume-control {
+        right: 8px;
+        top: 8px;
+    }
+
+    #music-volume {
+        width: 64px;
+    }
+
+    .main-title {
+        font-size: 1.48rem;
+    }
+
+    .main-subtitle,
+    .main-guidance {
+        letter-spacing: 2px;
+    }
+
+    .bucket-container {
+        height: 330px;
+    }
+
+    .hint-text {
+        margin-top: -34px;
+    }
+
+    .result-actions {
+        width: calc(100vw - 24px);
+    }
+}
