@@ -61,7 +61,7 @@ const btsUniverseFortunes = [
         message: "即便覺得自己像是在深海中用52赫茲獨自歌唱的鯨魚、孤獨且不被理解。請繼續唱下去，相同頻率的溫暖終會破浪而來。",
         lyrics: "我朝向未來而去，相信著那蔚藍的大海，還有相信我的赫茲",
         cover: "./assets/covers/hyyh2.png",
-        spotify: "https://open.spotify.com/track/08E3m98Xw7X0867X7y3w3w",
+        spotify: "https://open.spotify.com/track/1otHp4s8IRCLn1JZcVrNhz?si=7f346362a02d4417",
         apple: "https://music.apple.com/tw/song/whalien-52/1598662268"
     },
     {
@@ -92,7 +92,7 @@ const btsUniverseFortunes = [
     { song: "Blood Sweat & Tears", message: "毫無保留地釋放你的狂熱與靈魂吧！沉浸在自己真正熱愛的事情中，那專注的模樣正在散發極致的光彩。", lyrics: "我最後的舞步，全都帶走吧", cover: "./assets/covers/wings.png", spotify: "https://open.spotify.com/track/2u54HNQamwFuOMLSuhSRom?si=4bc9dd396c8440d5", apple: "https://music.apple.com/tw/song/blood-sweat-tears/1596532481" },
     { song: "DNA", message: "今天遇到的所有巧合與好運都不是偶然。這一切都是刻在宇宙基因與宿命軌道裡的必然緣分。", lyrics: "我們是找到彼此命運的兩個人", cover: "./assets/covers/her.png", spotify: "https://open.spotify.com/track/3uRLwBjI2TahxslcMTvpFs?si=1211bf95c1e54eb5", apple: "https://music.apple.com/tw/song/dna/1596529066" },
     { song: "Not Today", message: "今天絕不是向命運低頭或放棄的辛苦日子！只要還能奔跑就全力前行，即便辛苦，也要堅定走下去！", lyrics: "沒辦法用走的，就用爬的吧!即使用爬的也要gear up", cover: "./assets/covers/ynwa.png", spotify: "https://open.spotify.com/track/3wyrhwPpV8uhMMEms4vG3X?si=43483be036e747f3", apple: "https://music.apple.com/tw/song/not-today/1596529383" },
-    { song: "Save Me", message: "感到即將墜落或無助的時候，試著伸出雙手吧。那些溫慢的雙手與治癒的旋律，一定會穩穩拉住你。", lyrics: "伸出手吧，Save me save me", cover: "./assets/covers/hyyh2.png", spotify: "https://open.spotify.com/track/7bxGcILuAjkZzaveU28ZJS?si=8d92ee814803419d", apple: "https://music.apple.com/tw/song/save-me/1598662137" },
+    { song: "Save Me", message: "感到即將墜落或無助的時候，試著伸出雙手吧。那些溫慢的雙手與治癒的旋律，一定會穩穩拉住你。", lyrics: "伸出手吧，Save me save me", cover: "./assets/covers/yf.png", spotify: "https://open.spotify.com/track/7bxGcILuAjkZzaveU28ZJS?si=8d92ee814803419d", apple: "https://music.apple.com/tw/song/save-me/1598662137" },
     { song: "I NEED U", message: "儘管生活總會讓人跌跌撞撞，但心中那份對目標與夢想的炙熱渴望，正是推動你繼續前進的最美動力。", lyrics: "為何知道會受傷，仍舊如此需要你", cover: "./assets/covers/hyyh1.png", spotify: "https://open.spotify.com/track/3wQnyXNFXNUEOBt1pb4urq?si=727be90c708d41b8", apple: "https://music.apple.com/tw/song/i-need-u/1596533075" },
     { song: "Run", message: "就算跌倒、受傷、甚至流下眼淚也無所謂。只要目光依然看著終點、朝著夢想狂奔，過程就無比璀璨。",
         lyrics: "再次 Run Run Run 即使跌倒也沒關係",
@@ -161,6 +161,118 @@ const btsUniverseFortunes = [
         lyrics: "即使再掙扎也沒有用，就閉上眼側耳傾聽吧",
         cover: "./assets/covers/her.png",
         spotify: "https://open.spotify.com/track/1ZPeaPDjQOOC8hw1mNjyjF?si=95544cb305fb4ccc", apple: "https://music.apple.com/tw/song/pied-piper/1596529071"
+    },
+{
+        song: "Paradise",
+        message: "不一定每個人都必須擁有宏大夢想。停下喘口氣也沒關係，此時此刻活著的你，本身就是完美的樂園。",
+        lyrics: "沒有夢想也沒關係，你吐出的每個氣息，已是在樂園",
+        cover: "./assets/covers/tear.png",
+        spotify: "https://open.spotify.com/track/1YO4xJXhh9A1Feg9k8xuy2?si=73e4b5d57c634027", apple: "https://music.apple.com/tw/song/paradise/1598661248"
+    },
+{
+        song: "Moving On",
+        message: "改變雖讓人不安，但也意味著更成熟的起點。把美好回憶裝進心裡，勇敢地朝著下一個未知出發吧!",
+        lyrics: "搬家吧，和這充滿感情的地方說再見",
+        cover: "./assets/covers/hyyh1.png",
+        spotify: "https://open.spotify.com/track/0jo4304s0u51JHHCv7it9K?si=0d9070d4ab1e4c1d", apple: "https://music.apple.com/tw/song/moving-on/1596533344"
+    },
+{
+        song: "Tomorrow",
+        message: "覺得每天都在重複、看不到盡頭嗎？別灰心，黎明前總是最黑的。再堅持一下，明天的太陽必為你升起。",
+        lyrics: "明天到來就會陽光普照，請不要擔心",
+        cover: "./assets/covers/sla.png",
+        spotify: "https://open.spotify.com/track/0JkTVcN5kilfMztDb3bKZk?si=1e444bf955b64c66", apple: "https://music.apple.com/tw/song/tomorrow/1596533506"
+    },
+{
+        song: "Snooze",
+        message: "累了就安心睡一覺，受傷掉淚也沒關係。當世界滿是荊棘，請記得永遠有雙溫暖的手，會拼命接住你。",
+        lyrics: "願你的旅程以渺小啟程，以偉大結尾",
+        cover: "./assets/covers/day.png",
+        spotify: "https://open.spotify.com/track/4j3M8NrbGSXdMPwEVsnfHE?si=15b680ab79754079", apple: "https://music.apple.com/tw/song/snooze/1681824534"
+    },
+{
+        song: "People",
+        message: "世界的一切都在不停流逝與改變，痛苦也是。遇到挫折時別太執著，這不過是人生中一陣微風輕輕吹過。",
+        lyrics: "人們會變，正如我也變了，世事沒有永恆",
+        cover: "./assets/covers/d2.png",
+        spotify: "https://open.spotify.com/track/6HDHaCnH2FCSdEwXrJfEVF?si=777aa174941842b7", apple: "https://music.apple.com/tw/song/people/1679843588"
+    },
+{
+        song: "Wild Flower",
+        message: "與其追求瞬間熄滅的耀眼煙火，不如當一朵原野上的野花。在平靜中，綻放出最堅韌的生命力。",
+        lyrics: "我想在那天空四散， Light a flower, flowerwork Flower flowerwork",
+        cover: "./assets/covers/indigo.png",
+        spotify: "https://open.spotify.com/track/1AZjCZSGEjlxUufFQwSszF?si=d2b66c2d63a04f1f", apple: "https://music.apple.com/tw/song/wild-flower-with-%EC%A1%B0%EC%9C%A0%EC%A7%84/1654548658"
+    },
+{
+        song: "Slow Dancing",
+        message: "覺得生活步調太快的時候，就放慢腳步吧。跟著這段節奏，和自己的靈魂跳一場輕柔的慢舞。",
+        lyrics: "Maybe we could be slow dancing until the morning",
+        cover: "./assets/covers/layover.png",
+        spotify: "https://open.spotify.com/track/5h1BN75CEh8wdSwE1xrbSe?si=d2e210c1ed2b40b5", apple: "https://music.apple.com/tw/song/slow-dancing/1700687144"
+    },
+{
+        song: "Euphoria",
+        message: "這場跨越漫長黑暗的相遇。彼此就是生命中最美的奇蹟，只要牽起手，荒漠也能一秒化為天堂。",
+        lyrics: "Take my hands now, you are the cause of my euphoria",
+        cover: "./assets/covers/answer.png",
+        spotify: "https://open.spotify.com/track/5YMXGBD6vcYP7IolemyLtK?si=a7f599c7dc774934", apple: "https://music.apple.com/tw/song/euphoria/1598730615"
+    },
+{
+        song: "Set Me Free Pt. 2",
+        message: "別被別人的眼光或過去的失敗束縛。現在就拍拍翅膀，勇敢地為自己瘋狂飛翔一次吧!",
+        lyrics: "即使嘲笑我也不停下腳步",
+        cover: "./assets/covers/face.png",
+        spotify: "https://open.spotify.com/track/59hBR0BCtJsfIbV9VzCVAp?si=03bb2d7f783e459b", apple: "https://music.apple.com/tw/song/set-me-free-pt-2/1675962543"
+    },
+{
+        song: "Super Tuna",
+        message: "生活不需要總是那麼嚴肅，跟著輕快的節奏一起擺動吧！大笑一場，今天就是最快樂的一天。",
+        lyrics: "哥，請哥把我帶走吧",
+        cover: "./assets/covers/tuna.png",
+        spotify: "https://open.spotify.com/track/4pygz13A6EcLL6ti7kqGaf?si=3a038f12fd174585", apple: "https://music.apple.com/tw/song/super-tuna/1772993924"
+    },
+{
+        song: "Future",
+        message: "面對未知的明天，感到迷茫是很正常的。專注當下，命運終會帶領你走向最好的未來。",
+        lyrics: "走向未來的，希望的步伐",
+        cover: "./assets/covers/jib.png",
+        spotify: "https://open.spotify.com/track/0Puudh380z6cOCgMaTNm7h?si=fb4570a8676f446b", apple: "https://music.apple.com/tw/song/future/1633261062"
+    },
+{
+        song: "Dreamers",
+        message: "致所有勇敢追夢的靈魂！只要心懷信仰，哪怕前路未知，腳下的每一步都在為這段傳奇寫下最美的見證。",
+        lyrics: "We make it happen, 'cause we believe it",
+        cover: "./assets/covers/dreamers.png",
+        spotify: "https://open.spotify.com/track/0jY618wuln0b5b8sCxFgjk?si=d809273417f7441d", apple: "https://music.apple.com/tw/song/dreamers-music-from-the-fifa-world-cup-qatar-2022/1655441868"
+    },
+{
+        song: "on the street",
+        message: "腳下的路途或許漫長，但沿途的風景都有其意義。放慢緊繃的步伐吧，希望與溫暖一直都在身邊同行。",
+        lyrics: "我的雙腳踏實地地行走，無論在哪裡",
+        cover: "./assets/covers/ots.png",
+        spotify: "https://open.spotify.com/track/0Gxnj8yTGYxMYyWcR4wawW?si=a412833e04154a92", apple: "https://music.apple.com/tw/song/on-the-street-solo-version-solo-version/1730608079"
+    },
+{
+        song: "Serendipity",
+        message: "生命中所有的偶然，都是宇宙精心準備的。相信直覺，張開雙臂去擁抱那些命中注定的美好與奇蹟。",
+        lyrics: "我們的幸福是被注定的",
+        cover: "./assets/covers/answer.png",
+        spotify: "https://open.spotify.com/track/1dS4l6xmdgEhCZTAhdOm4N?si=cd0df591468647c2", apple: "https://music.apple.com/tw/song/serendipity-full-length-edition/1598730619"
+    },
+{
+        song: "Trivia 承: Love",
+        message: "因為有了愛，原本粗糙、有稜角的人生才得以被磨平。在生命旅程中，彼此就是活著的最終答案。",
+        lyrics: "你是將我由「人」變成「愛」的人",
+        cover: "./assets/covers/answer.png",
+        spotify: "https://open.spotify.com/track/6bSwpQYEguyMlkCoWiBt3Y?si=712b3140f6434f63", apple: "https://music.apple.com/tw/song/trivia-%E6%89%BF-love/1598730627"
+    },
+{
+        song: "Scenery",
+        message: "在平淡的日子裡漫步，收集一路上遇見的美好。只要回頭看看，那些腳印一直都在身後，閃閃發亮。",
+        lyrics: "當你留下腳印 轉身離開時，我會守護你 再次走向我的路",
+        cover: "./assets/covers/sc.png",
+        spotify: "https://open.spotify.com/track/1UHkDovEFqHzHCPyNe0BTy?si=8c47b52badeb43e4", apple: "https://music.apple.com/tw/song/scenery/1703132750"
     }
 ];
 
@@ -175,6 +287,9 @@ const stickImages = [
 
 let isDrawing = false;
 let currentResult = null;
+let fortuneQueue = [];
+let preloadPromise = Promise.resolve();
+let assetsReady = false;
 
 const bgMusic = document.getElementById('bg-music');
 const startBtn = document.getElementById('start-btn');
@@ -188,15 +303,53 @@ const settingsPanel = document.getElementById('settings-panel');
 const volumeSlider = document.getElementById('music-volume');
 const muteToggle = document.getElementById('mute-toggle');
 const visitorCountEl = document.getElementById('visitor-count');
+const preloadStatusEl = document.getElementById('preload-status');
+const preloadTextEl = document.getElementById('preload-text');
+const preloadBarEl = document.getElementById('preload-bar');
+const historyToggle = document.getElementById('history-toggle');
+const historyPanel = document.getElementById('history-panel');
+const historyListEl = document.getElementById('history-list');
+const historyCountEl = document.getElementById('history-count');
 const DEFAULT_VOLUME = 0.5;
+const START_BUTTON_LABEL = startBtn?.innerText || '開啟防彈宇宙';
+const FORTUNE_QUEUE_KEY = 'btsUniverseFortuneQueue';
+const FORTUNE_HISTORY_KEY = 'btsUniverseFortuneHistory';
+const MAX_HISTORY_ITEMS = 10;
+const PRELOAD_TIMEOUT_MS = 7000;
+const BUCKET_IMAGE_URL = 'https://zany-harlequin-wggywxadhw.edgeone.app/9.png';
+const CARD_BACKGROUND_URL = './assets/bts.jpg';
 
 initNightSky();
 initMusicSettings();
 initVisitorCount();
+initFortuneQueue();
+initFortuneHistory();
+preloadPromise = preloadUniverseAssets();
 
 // 點擊開始
 if (startBtn) {
-    startBtn.addEventListener('click', () => {
+    startBtn.disabled = true;
+    startBtn.classList.add('is-loading');
+    updatePreloadProgress(0);
+
+    preloadPromise.finally(() => {
+        assetsReady = true;
+        startBtn.disabled = false;
+        startBtn.classList.remove('is-loading');
+        startBtn.innerText = START_BUTTON_LABEL;
+    });
+
+    startBtn.addEventListener('click', async () => {
+        if (!assetsReady) {
+            startBtn.disabled = true;
+            startBtn.classList.add('is-loading');
+            await preloadPromise;
+            assetsReady = true;
+            startBtn.disabled = false;
+            startBtn.classList.remove('is-loading');
+            startBtn.innerText = START_BUTTON_LABEL;
+        }
+
         switchPage('page-draw');
         if (bgMusic && bgMusic.paused) {
             bgMusic.play().catch(err => console.log("音樂播放受限:", err));
@@ -247,6 +400,8 @@ function startDrawingAnimation() {
     isDrawing = true;
 
     const shakeSound = document.getElementById('shake-sound');
+    const result = getNextFortune();
+    const resultCoverPromise = preloadImage(result.cover, PRELOAD_TIMEOUT_MS);
 
     if (hintText) hintText.innerText = "正在連線阿米棒小宇宙...";
     if (bucketWrapper) bucketWrapper.classList.add('shake-animation');
@@ -265,7 +420,7 @@ function startDrawingAnimation() {
             shakeSound.currentTime = 0; 
         }
         
-        const randomStickImg = stickImages[Math.floor(Math.random() * stickImages.length)];
+        const randomStickImg = getRandomItem(stickImages);
         if (flyingStick) {
             flyingStick.src = randomStickImg;
             flyingStick.classList.add('shoot-up');
@@ -276,9 +431,8 @@ function startDrawingAnimation() {
             if (hintText) hintText.innerText = "宇宙星軌正在排列你的答案...";
         }, 900);
 
-        setTimeout(() => {
-            const randomIndex = Math.floor(Math.random() * btsUniverseFortunes.length);
-            const result = btsUniverseFortunes[randomIndex];
+        setTimeout(async () => {
+            await resultCoverPromise;
             currentResult = result;
 
             const resMsgEl = document.getElementById('res-message');
@@ -295,10 +449,219 @@ function startDrawingAnimation() {
             if (linkSpotifyEl) linkSpotifyEl.href = result.spotify;
             if (linkAppleEl) linkAppleEl.href = result.apple;
 
+            addFortuneToHistory(result);
             document.getElementById('page-draw')?.classList.remove('mystic-transition');
             switchPage('page-result');
         }, 2200); 
     }, 1450); 
+}
+
+function initFortuneQueue() {
+    fortuneQueue = readFortuneQueue();
+    if (!fortuneQueue.length) {
+        resetFortuneQueue();
+    }
+}
+
+function getNextFortune() {
+    if (!fortuneQueue.length) {
+        resetFortuneQueue(currentResult?.song);
+    }
+
+    let nextIndex = fortuneQueue.shift();
+
+    if (currentResult && btsUniverseFortunes[nextIndex]?.song === currentResult.song && fortuneQueue.length) {
+        fortuneQueue.push(nextIndex);
+        nextIndex = fortuneQueue.shift();
+    }
+
+    saveFortuneQueue();
+    return btsUniverseFortunes[nextIndex] || btsUniverseFortunes[0];
+}
+
+function resetFortuneQueue(excludeSong = '') {
+    const indexes = btsUniverseFortunes
+        .map((_, index) => index)
+        .filter(index => btsUniverseFortunes[index]?.song !== excludeSong);
+    fortuneQueue = shuffleArray(indexes);
+
+    if (excludeSong) {
+        const excludedIndex = btsUniverseFortunes.findIndex(item => item.song === excludeSong);
+        if (excludedIndex >= 0) fortuneQueue.push(excludedIndex);
+    }
+
+    saveFortuneQueue();
+}
+
+function readFortuneQueue() {
+    try {
+        const parsed = JSON.parse(localStorage.getItem(FORTUNE_QUEUE_KEY) || '[]');
+        const validIndexes = new Set(btsUniverseFortunes.map((_, index) => index));
+        const seen = new Set();
+        return Array.isArray(parsed)
+            ? parsed.filter(index => {
+                const isValid = Number.isInteger(index) && validIndexes.has(index) && !seen.has(index);
+                if (isValid) seen.add(index);
+                return isValid;
+            })
+            : [];
+    } catch (error) {
+        return [];
+    }
+}
+
+function saveFortuneQueue() {
+    try {
+        localStorage.setItem(FORTUNE_QUEUE_KEY, JSON.stringify(fortuneQueue));
+    } catch (error) {
+        // The in-memory queue still prevents quick repeats for the current visit.
+    }
+}
+
+function shuffleArray(items) {
+    const shuffled = [...items];
+    for (let i = shuffled.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+function getRandomItem(items) {
+    return items[Math.floor(Math.random() * items.length)];
+}
+
+async function preloadUniverseAssets() {
+    const imageUrls = uniqueValues([
+        CARD_BACKGROUND_URL,
+        BUCKET_IMAGE_URL,
+        ...stickImages,
+        ...btsUniverseFortunes.map(item => item.cover)
+    ]);
+    let completed = 0;
+    const total = imageUrls.length || 1;
+
+    await Promise.allSettled(imageUrls.map(url => preloadImage(url, PRELOAD_TIMEOUT_MS).finally(() => {
+        completed += 1;
+        updatePreloadProgress(Math.round((completed / total) * 100));
+    })));
+    preloadAudioMetadata(bgMusic);
+    preloadAudioMetadata(document.getElementById('shake-sound'));
+    updatePreloadProgress(100);
+}
+
+function updatePreloadProgress(percent) {
+    const value = Math.max(0, Math.min(100, percent));
+    if (startBtn) {
+        startBtn.innerText = value >= 100 ? START_BUTTON_LABEL : `宇宙素材載入中 ${value}%`;
+    }
+    if (preloadTextEl) {
+        preloadTextEl.innerText = value >= 100 ? '宇宙素材準備完成' : `準備宇宙素材中 ${value}%`;
+    }
+    if (preloadBarEl) {
+        preloadBarEl.style.width = `${value}%`;
+    }
+    if (preloadStatusEl) {
+        preloadStatusEl.classList.toggle('is-complete', value >= 100);
+    }
+}
+
+function initFortuneHistory() {
+    renderFortuneHistory();
+
+    if (historyToggle && historyPanel) {
+        historyToggle.addEventListener('click', () => {
+            const isOpen = !historyPanel.hidden;
+            historyPanel.hidden = isOpen;
+            historyToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+    }
+}
+
+function addFortuneToHistory(result) {
+    const history = readFortuneHistory();
+    const item = {
+        song: result.song,
+        message: result.message,
+        cover: result.cover,
+        createdAt: Date.now()
+    };
+    history.unshift(item);
+    saveFortuneHistory(history.slice(0, MAX_HISTORY_ITEMS));
+    renderFortuneHistory();
+}
+
+function readFortuneHistory() {
+    try {
+        const parsed = JSON.parse(localStorage.getItem(FORTUNE_HISTORY_KEY) || '[]');
+        return Array.isArray(parsed)
+            ? parsed.filter(item => item && item.song && item.message).slice(0, MAX_HISTORY_ITEMS)
+            : [];
+    } catch (error) {
+        return [];
+    }
+}
+
+function saveFortuneHistory(history) {
+    try {
+        localStorage.setItem(FORTUNE_HISTORY_KEY, JSON.stringify(history));
+    } catch (error) {
+        // History is optional; drawing should still work if storage is unavailable.
+    }
+}
+
+function renderFortuneHistory() {
+    const history = readFortuneHistory();
+    if (historyCountEl) historyCountEl.innerText = String(history.length);
+    if (!historyListEl) return;
+
+    if (!history.length) {
+        historyListEl.innerHTML = '<p class="history-empty">還沒有抽籤紀錄</p>';
+        return;
+    }
+
+    historyListEl.innerHTML = history.map(item => `
+        <article class="history-item">
+            <img src="${escapeAttribute(item.cover)}" alt="" loading="lazy">
+            <div>
+                <h3>${escapeHtml(item.song)}</h3>
+                <p>${escapeHtml(item.message)}</p>
+            </div>
+        </article>
+    `).join('');
+}
+
+function preloadImage(src, timeoutMs = 5000) {
+    return new Promise(resolve => {
+        if (!src) {
+            resolve(false);
+            return;
+        }
+
+        const image = new Image();
+        let settled = false;
+        const done = ok => {
+            if (settled) return;
+            settled = true;
+            clearTimeout(timer);
+            resolve(ok);
+        };
+        const timer = setTimeout(() => done(false), timeoutMs);
+
+        image.onload = () => done(true);
+        image.onerror = () => done(false);
+        image.src = src;
+    });
+}
+
+function preloadAudioMetadata(audio) {
+    if (!audio) return;
+    audio.preload = 'auto';
+    audio.load();
+}
+
+function uniqueValues(values) {
+    return [...new Set(values.filter(Boolean))];
 }
 
 function scaledRect(selector, cardRect, scaleX, scaleY) {
@@ -371,6 +734,14 @@ function escapeXml(text) {
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;');
+}
+
+function escapeHtml(text) {
+    return escapeXml(text).replace(/'/g, '&#39;');
+}
+
+function escapeAttribute(text) {
+    return escapeHtml(text);
 }
 
 function round(value) {
