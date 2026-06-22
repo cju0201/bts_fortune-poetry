@@ -571,8 +571,8 @@ function initFortuneHistory() {
 
     if (historyToggle && historyPanel) {
         historyToggle.addEventListener('click', () => {
-            const isOpen = !historyPanel.hidden;
-            historyPanel.hidden = isOpen;
+            const isOpen = !historyPanel.classList.contains('is-collapsed');
+            historyPanel.classList.toggle('is-collapsed', isOpen);
             historyToggle.setAttribute('aria-expanded', String(!isOpen));
         });
     }
