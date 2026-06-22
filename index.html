@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>防彈宇宙籤詩</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?v=20260622-history-preload">
 
   </head>
     
   <body>
   <canvas id="night-sky" class="night-sky" aria-hidden="true"></canvas>
+  <div class="fortune-history" id="fortune-history">
+    <button class="history-toggle" id="history-toggle" type="button" aria-expanded="false" aria-controls="history-panel">
+      抽籤紀錄 <span id="history-count">0</span>
+    </button>
+    <div class="history-panel" id="history-panel" hidden>
+      <div class="history-panel-title">最近抽到的籤詩</div>
+      <div class="history-list" id="history-list"></div>
+    </div>
+  </div>
   <div class="volume-control" id="settings-panel" aria-label="背景音樂音量">
     <button class="settings-toggle" id="settings-toggle" type="button" aria-label="靜音切換">
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -34,6 +43,10 @@
         <h1 class="main-title">防彈宇宙籤詩</h1>
         <p class="main-subtitle">FOR ARMY</p>
         <button class="btn" id="start-btn">開啟防彈宇宙</button>
+        <div class="preload-status" id="preload-status" aria-live="polite">
+            <span id="preload-text">準備宇宙素材中 0%</span>
+            <span class="preload-track"><span id="preload-bar" class="preload-bar"></span></span>
+        </div>
         <p class="main-guidance">默想你心中的煩惱或願望，讓防彈的旋律成為治癒你的解答</p>
     </div>
 
@@ -92,7 +105,7 @@
     <p>© 2026 防彈宇宙籤詩 INC. ALL RIGHTS RESERVED CJU.</p>
     <p>本平台非官方關聯，僅作為 A.R.M.Y 在宇宙繁星軌道中聆聽音樂</p>
   </footer>
-    <script  src="./script.js"></script>
+    <script src="./script.js?v=20260622-history-preload"></script>
 
   </body>
   
